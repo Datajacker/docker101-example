@@ -1,4 +1,4 @@
-# Docker Example
+# Docker Example Answers
 
 Before we jump into this demonstration, you'll need to install Docker for [MacOS](https://docs.docker.com/docker-for-mac/install/) or [Windows](https://docs.docker.com/docker-for-windows/install/).
 
