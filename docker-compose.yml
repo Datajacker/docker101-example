@@ -8,16 +8,15 @@ services:
     volumes:
       - ./:/var/www/html
     environment:
-      - DB_HOST=mysql
-      - DB_USER=demo
-      - DB_PASS=password
-      - DB_NAME=example
+      - DB_HOST=
+      - DB_USER=
+      - DB_PASS=
+      - DB_NAME=
   
   apache:
     build: ./config/apache
     depends_on:
       - php
-      - mysql
     networks:
       - frontend
       - backend
@@ -25,16 +24,6 @@ services:
       - '8080:80'
     volumes:
       - ./:/var/www/html
-  
-  mysql:
-    build: ./config/mysql
-    networks:
-      - backend
-    environment:
-      - MYSQL_ROOT_PASSWORD=rootpassword
-      - MYSQL_USER=demo
-      - MYSQL_PASSWORD=password
-      - MYSQL_DATABASE=example
   
 networks:
   frontend:
