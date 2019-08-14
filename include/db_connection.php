@@ -9,11 +9,13 @@
     try {
       $conn = new PDO($dsn, $user, $pass);
     } catch (Exception $e) {
-      $conn = NULL;
-      die("Connection failed:\n" . $e);
+      $conn = false;
     }
 
     return $conn;
   }
 
   $conn = connect();
+  $died = $conn === false;
+
+  $press_count = $died ? 0 : $conn->query("SELECT COUNT(*) FROM button_presses")->fetchColumn();
