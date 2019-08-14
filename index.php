@@ -19,7 +19,7 @@
             Docker Example
           </a>
           <div class="right item">
-            <a href="" class="ui button">
+            <a href="https://github.com/cybera/docker101-example" class="ui button">
               <i class="github icon"></i>
               View on Github
             </a>
