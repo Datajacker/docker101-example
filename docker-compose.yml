@@ -3,8 +3,6 @@ version: '3'
 services:
   php:
     build: ./config/php
-    networks:
-      - backend
     volumes:
       - ./:/var/www/html
     environment:
@@ -17,14 +15,7 @@ services:
     build: ./config/apache
     depends_on:
       - php
-    networks:
-      - frontend
-      - backend
     ports:
       - '8080:80'
     volumes:
       - ./:/var/www/html
-  
-networks:
-  frontend:
-  backend:
