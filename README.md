@@ -4,7 +4,7 @@ Before we jump into this demonstration, you'll need to install Docker for [MacOS
 
 Clone this repository somewhere on your computer. Run `docker-compose build` and `docker-compose up -d`.
 
-If you get stuck, a pull request containing the answers is viewable [here](#).
+If you get stuck, you can compare your code to the answer branch [here](https://github.com/cybera/docker101-example/tree/answers).
 
 ### Goal
 Connect the application to MySQL so that it can count button presses. 
